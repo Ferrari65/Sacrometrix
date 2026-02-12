@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: Sacrometrix
+  datasource:
+    url: jdbc:sqlite:./cana_prev.db
+    driver-class-name: org.sqlite.JDBC
+
+
+server:
+  port: 8080
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.community.dialect.SQLiteDialect
+
+springdoc:
+  swagger-ui:
+    path: /swagger
+  api-docs:
+    path: /v3/api-docs
+
+app:
+  jwt:
+    secret: "coloque_um_secret_com_32+caracteres_aqui"
+    expirationMinutes: 60
+
