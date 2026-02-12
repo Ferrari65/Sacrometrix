@@ -21,6 +21,9 @@ springdoc:
 
 app:
   jwt:
-    secret: "coloque_um_secret_com_32+caracteres_aqui"
-    expirationMinutes: 60
+    issuer: "Sacrometrix-api"
+    access-ttl-minutes: 15
+    refresh-ttl-days: 14
+    clock-skew-seconds: 30
+    secret: ${JWT_SECRET}
 
